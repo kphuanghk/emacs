@@ -16,7 +16,7 @@ Then create the user (AKA "role") inside PostgreSQL using psql.exe:
     $\list
     $\c <db>
     $\dt #List tables
-    $\dt #List tablespace
+    $\db #List tablespace
 
 
 To allow local access is via password authentication:
@@ -32,3 +32,12 @@ Edit the file /etc/postgresql/9.1/main/pg_hba.conf
 If failed to create the app/user account that existed in postgres, you may see the error:
     FATAL:  Peer authentication failed for user "<user>	 "
 
+
+In APPS/config/initializers/
+    curl -O https://rails.lighthouseapp.com/projects/8994/tickets/1731/a/411967/mailer_ext.rb
+
+The key might be due to the issue 8994
+# https://rails.lighthouseapp.com/projects/8994/tickets/1731-make-enable_starttls_auto-opt-in-in-actionmailer#ticket-1731-18
+
+Checkout Latest Rails Source
+    git clone https://github.com/rails/rails.git
